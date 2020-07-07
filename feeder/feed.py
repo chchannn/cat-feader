@@ -3,6 +3,7 @@ import time
 import os
 
 def feed(p0=2, p1=7, n_stress_relief=3, stress_relief_offset=.5):
+    
     """p0 should be smaller than p1"""
     dirname = os.path.dirname(__file__)
     filename = os.path.join(dirname, 'current_location.txt')
@@ -62,10 +63,5 @@ def feed(p0=2, p1=7, n_stress_relief=3, stress_relief_offset=.5):
     return output
 
 
-# def feed(a,b):
-#     print(f'position {a}, {b}: feed complete, shutdown servo') 
-#     return f'position {a}, {b}: feed complete, shutdown servo'
-
-
 if __name__ == '__main__':
-    _ = feed(2.5, 8.5)
+    _ = debug_feed(2.5, 8.5)

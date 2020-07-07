@@ -1,12 +1,20 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img {
+          width: 10%;
+        }
+        </style>
     <title>Pi Feeder 0</title>
+    <link rel="icon" href="{% static 'feeder/pearl-icon.jpg' %}"type="image/icon type" />
 </head>
 <body>
-    <h1>Pearl Home</h1>
+    <h1 style = "color:palevioletred;">Pearl Home</h1>
+    <img src="{% static "feeder/pearl.jpg" %}" alt="pearl-pic"><hr>
     <button onclick="location.href='{% url 'rotate_servo' %}'">Feed</button> <hr>
     {% if data %}
     {{data | safe}}
