@@ -8,15 +8,19 @@
 </head>
 <body>
     <h1 style = "color:palevioletred;">Pearl Home</h1>
+    
     <style>
         img {
-          width: 10%;
+          width: 50%;
+          text-align: center;
         }
+        h1 {text-align: center;}
+
         </style>
     <link rel="icon" href="{% static 'feeder/pearl-icon.jpg' %}"type="image/icon type" />
 
 
-    <img src="{% static "feeder/pearl.jpg" %}" alt="pearl-pic"><hr>
+    <img src="{% static "feeder/pearl.jpg" %}" alt="pearl-pic" ><hr>
     <button onclick="location.href='{% url 'rotate_servo' %}'">Feed Pearl</button> <hr>
     {% if data %}
     {{data | safe}}
