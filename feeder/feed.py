@@ -58,7 +58,14 @@ def feed(p0=2, p1=7, n_stress_relief=3, stress_relief_offset=.5):
     time.sleep(1)
     servo.stop()
     GPIO.cleanup()
-    
-if __name__ == '__main__':
-    feed(2.5, 8.5)
 
+      return 'feed complete, shutdown servo'
+
+
+# def feed(a,b):
+#     print(f'position {a}, {b}: feed complete, shutdown servo') 
+#     return f'position {a}, {b}: feed complete, shutdown servo'
+
+
+if __name__ == '__main__':
+    _ = feed(2.5, 8.5)
