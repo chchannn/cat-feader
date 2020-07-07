@@ -58,8 +58,8 @@ def feed(p0=2, p1=7, n_stress_relief=3, stress_relief_offset=.5):
     time.sleep(1)
     servo.stop()
     GPIO.cleanup()
-
-      return 'feed complete, shutdown servo'
+    output = f'feed complete, shutdown servo'
+    return output
 
 
 # def feed(a,b):
